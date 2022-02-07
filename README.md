@@ -1,8 +1,8 @@
 # SudokuSolver
 A personal project written in python. This takes a sudoku input through a GUI, then solves the puzzle. All puzzles that can be solved, will be solved. The sudoku solver works by solving the puzzle as much as it can until it has to make a guess. The algorithm is recursive so
 
-def solve(sudoku):
-  sudoku = fill_in_any_numbers_that_are_certain(sudoku)
+def solve(sudoku):\n
+  sudoku = fill_in_any_numbers_that_are_certain(sudoku)\n
   if sudoku.cannot_fill_anymore AND sudoku.not_solved:
     values = pick_empty_sudoku_box_with_fewest_options(sudoku)
     for value in values:
