@@ -1,8 +1,9 @@
 # SudokuSolver
-A personal project written in python. This takes a sudoku input through a GUI, then solves the puzzle. All puzzles that can be solved, will be solved. The sudoku solver works by solving the puzzle as much as it can until it has to make a guess. The algorithm is recursive so
+A personal project written in python that takes a sudoku input through a GUI and solves the puzzle. Even the trickiest sudoku can be solved as the program is able to make an educated guess when necessary (as shown below).
 
-def solve(sudoku):<br>
-  sudoku = fill_in_any_numbers_that_are_certain(sudoku)\n
+```
+def solve(sudoku):
+  sudoku = fill_in_any_numbers_that_are_certain(sudoku)
   if sudoku.cannot_fill_anymore AND sudoku.not_solved:
     values = pick_empty_sudoku_box_with_fewest_options(sudoku)
     for value in values:
@@ -10,11 +11,15 @@ def solve(sudoku):<br>
       solve(new_sudoku)
       if sudoku.solved:
         break
+```
+
+## Snippet
+![image](https://user-images.githubusercontent.com/42321644/189491510-bc2fe831-9e03-4d2c-9f7b-8633313efb23.png)
         
-# Requirements:
+## Requirements:
 Tkinter import
 
-# Instructions:
+## Instructions:
 1. Run driver.py found in place SudokuSolver/src/driver.py using the windows console command python driver.py
 2. Enter Sudoku puzzle
 3. Click solve
